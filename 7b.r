@@ -1,0 +1,15 @@
+# IMPLEMENTATION OF MODEL BASED CLUSTERING
+install.packages("factoextra") 
+install.packages("cluster") 
+install.packages("magrittr") 
+library("cluster") 
+library("factoextra") 
+library("magrittr") 
+library("mclust") 
+data("diabetes") 
+head(diabetes, 3) 
+library(factoextra) 
+fviz_mclust(mc, "BIC", palette="jco") 
+fviz_mclust(mc, "classification", geom="point", 
+pointsize=1.5, palette="jco")  
+fviz_mclust(mc, "uncertainty", palette="jco")
